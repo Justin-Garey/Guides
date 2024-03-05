@@ -19,3 +19,5 @@
 9. Some tips for [Gaming](./gaming_on_linux.md) on Linux.
 
 10. [Instructions](./ios_sideloading.md) for sideloading apps onto an iOS device. (Specifically an iPad Mini 1)
+
+11. Install Node and npm with the [Node Version Manager](./install_node_ubuntu.md) (nvm).
