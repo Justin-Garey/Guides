@@ -15,3 +15,7 @@
 7. Remove the [Boot Logo](./rm_boot_logo.md) on Ubuntu.
 
 8. [Testing Memory](./memtester.md) (RAM).
+
+9. Some tips for [Gaming](./gaming_on_linux.md) on Linux.
+
+10. [Instructions](./ios_sideloading.md) for sideloading apps onto an iOS device. (Specifically an iPad Mini 1)
