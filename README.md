@@ -21,3 +21,5 @@
 10. [Instructions](./guides/ios_sideloading.md) for sideloading apps onto an iOS device. (Specifically an iPad Mini 1)
 
 11. Install Node and npm with the [Node Version Manager](./guides/install_node_ubuntu.md) (nvm).
+    
+12. Change the [Hostname](./guides/hostname.md) of your linux system.
