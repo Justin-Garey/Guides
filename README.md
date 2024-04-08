@@ -1,6 +1,6 @@
 # Guides
 
-1. [SSH](./guides/ssh.md) gives some tips for better use of SSH.
+1. Tips for better use of [SSH](./guides/ssh.md).
 
 2. Setting up a [Skyfactory 3](./guides/skyfactory3.md) server is way easier than anticipated.
 
@@ -23,3 +23,5 @@
 11. Install Node and npm with the [Node Version Manager](./guides/install_node_ubuntu.md) (nvm).
     
 12. Change the [Hostname](./guides/hostname.md) of your linux system.
+
+13. Perform [User Modifications](./guides/linux_user_mods.md) such as changing the username and home directory.
