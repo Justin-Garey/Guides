@@ -6,7 +6,7 @@
 
 3. Minecraft [Addons](./guides/minecraft_addons.md) that I've used are listed here.
 
-4. Screensaver [instructions](./guides/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
+4. [Screensaver instructions](./guides/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
 
 5. How to use a Selenium like library in Rust. A [Thirtyfour](./guides/thirtyfour.md) tutorial is provided that will fetch the Merriam Webster word of the day.
 
@@ -18,10 +18,16 @@
 
 9. Some tips for [Gaming](./guides/gaming_on_linux.md) on Linux.
 
-10. [Instructions](./guides/ios_sideloading.md) for sideloading apps onto an iOS device. (Specifically an iPad Mini 1)
+10. Instructions for [sideloading](./guides/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)
 
 11. Install Node and npm with the [Node Version Manager](./guides/install_node_ubuntu.md) (nvm).
     
 12. Change the [Hostname](./guides/hostname.md) of your linux system.
 
 13. Perform [User Modifications](./guides/linux_user_mods.md) such as changing the username and home directory.
+
+14. [Overclock](./guides/rpi_overclocking.md) a Raspberry Pi.
+
+15. [Raspberry Pi Cases](./guides/rpi_cases.md) I've used.
+
+16. Create a Terraria server with [TShock](./guides/tshock.md)
