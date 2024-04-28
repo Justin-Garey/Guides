@@ -31,3 +31,5 @@
 15. [Raspberry Pi Cases](./guides/rpi_cases.md) I've used.
 
 16. Create a Terraria server with [TShock](./guides/tshock.md)
+
+17. Making a [USB Rubber Ducky with a Raspberry Pi Pico](./guides/pico-ducky/pico-ducky.md)

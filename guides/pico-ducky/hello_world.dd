@@ -1,0 +1,7 @@
+REM Hello World Payload
+ATTACKMODE HID STORAGE
+DELAY 2000
+CTRL ALT t
+DELAY 1000
+STRING echo "Hello, World!"
+ENTER
