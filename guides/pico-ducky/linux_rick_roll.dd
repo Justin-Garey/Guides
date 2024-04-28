@@ -1,0 +1,7 @@
+REM Rick Roll on Linux
+ATTACKMODE HID STORAGE
+DELAY 2000
+CTRL ALT t
+DELAY 1000
+STRING curl https://github.com/Justin-Garey/Guides/blob/main/guides/pico-ducky/theme_song.mp3 -o theme_song.mp3
+ENTER
