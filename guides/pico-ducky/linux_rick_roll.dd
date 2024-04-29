@@ -5,9 +5,9 @@ CTRL ALT t
 DELAY 1000
 STRING curl https://raw.githubusercontent.com/Justin-Garey/Guides/main/guides/pico-ducky/theme_song.zip -o theme_song.zip
 ENTER
-STRING unzip theme_song.zip
+STRING unzip -u theme_song.zip
 ENTER
-STRING ffplay -v 0 -nodisp -autoexit theme_song.mp3 &
+STRING aplay theme_song.wav &
 ENTER
 STRING exit
 ENTER
