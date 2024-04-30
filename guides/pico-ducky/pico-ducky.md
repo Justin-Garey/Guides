@@ -10,6 +10,8 @@ These instructions are based on a Network Chuck [video](https://youtu.be/e_f9p-_
 
 3. A reverse shell could always come in handy and would be fun to just have a proof of concept. 
 
+4. Not sure how well it would work, but a password cracker would be possible.
+
 ## Notes so far
-- I'm not sure why but it seems to send in the commands slower than I expected. I'm not sure if my expectations were too high or if the data cable is slow.
+- The data will seem slower if the DELAYs are included. They are not needed even though the terminal looks a bit jumbled with them there.
 - A ducky script doesn't necessarily need to run everything. It could be the injection point to download a malicious script which then runs in the background on your system. Better yet, the ducky script could create a red herring and hide something more malicious on the system.

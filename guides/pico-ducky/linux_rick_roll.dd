@@ -7,7 +7,9 @@ STRING curl https://raw.githubusercontent.com/Justin-Garey/Guides/main/guides/pi
 ENTER
 STRING unzip -u theme_song.zip
 ENTER
-STRING aplay theme_song.wav &
+STRING rm theme_song.zip
+ENTER
+STRING (aplay theme_song.wav; rm theme_song.wav) &
 ENTER
 STRING exit
 ENTER
