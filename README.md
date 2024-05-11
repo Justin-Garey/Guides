@@ -33,3 +33,5 @@
 16. Create a Terraria server with [TShock](./guides/tshock.md)
 
 17. Making a [USB Rubber Ducky with a Raspberry Pi Pico](./guides/pico-ducky/pico-ducky.md)
+
+18. Stream with [Stremio](./guides/stremio.md)
