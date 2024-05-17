@@ -35,3 +35,5 @@
 17. Making a [USB Rubber Ducky with a Raspberry Pi Pico](./guides/pico-ducky/pico-ducky.md)
 
 18. Stream with [Stremio](./guides/stremio.md)
+
+19. Host a server to store and read books with [Kavita](./guides/kavita.md)
