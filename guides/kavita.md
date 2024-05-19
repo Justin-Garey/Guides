@@ -78,6 +78,21 @@ rsync -r --ignore-existing ~/DigitalLibraries/Books/ argonite:~/DigitalLibraries
 - -r is for recursive copy
 - --ignore-existing prevents the copy from wasting resources and overwriting existing files
 
+### Smart Filters
+
+A smart filter can be used to sort books on the side nav or in the dashboard. This is especially handy if you want to see all of the books you have or have not read.
+
+To create a smart filter:
+- Hit the green filter-icon button in the top right of the screen
+- Remove the top filter with the **-** icon
+- Make the second filter *Read Progress* *Equals* *100*
+- Click *Apply* to see it happen
+- Change the *Filter Name* to *Completed Books* 
+- Hit *Save*
+- Now click the three dots icon next to *Home* on the side nav
+- Select *Customize*
+- Finally, add the smart filter 
+
 ## Calibre
 
 Calibre is a great tool for organizing a book collection and editing the metadata of epubs. Basic use is as follows:
