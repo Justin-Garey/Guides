@@ -30,7 +30,7 @@
 
 15. [Raspberry Pi Cases](./guides/rpi_cases.md) I've used.
 
-16. Create a Terraria server with [TShock](./guides/tshock.md)
+16. Everything you need to know about setting up a [Terraria Server](./guides/terraria.md). The guide runs through a vanilla server, a modded server on your machine, a dedicated server for modded terraria, and how to setup a TShock server which gives more administrative abilities.
 
 17. Making a [USB Rubber Ducky with a Raspberry Pi Pico](./guides/pico-ducky/pico-ducky.md)
 
