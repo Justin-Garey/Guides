@@ -142,6 +142,16 @@ scp -r .local/share/Terraria/tModLoader/ machine:/home/justin/.local/share/Terra
 ```
 - This will copy over the Worlds but not the mods. See above to finish copying those over.
 
+#### Server Configurations
+
+It is much easier to use a configuration file and command line parameters than it is to keep manually setting up the world. The command structure I am using is:
+```
+./start-tModLoaderServer.sh -nosteam -port 7777 -maxplayers 2 -password *** -world ~/.local/share/Terraria/tModLoader/Worlds/Spiky_Tree_Time.wld | tee -a server-logs.log
+```
+- I've included the tee command above as I am using that to save the log files. I've seen a lot of internet bots try to see whats available on that port. A quick scan ensures no one is actually connecting to my server aside from those I want.
+
+A configuration file could also be created but isn't necessary for the basics unless you have multiple worlds with different permissions you would like to put up. The above could be done in a configuration file such as *spiky_tree_time_config.txt*. The command would be ```./start-tModLoaderServer.sh -config ./spiky_tree_time_config.txt```.
+
 ## Tshock on a Raspberry Pi
 Basic server setup using tshock for Terraria designed for a Raspberry Pi
 
