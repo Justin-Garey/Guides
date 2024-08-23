@@ -1,41 +1,40 @@
 # Guides
 
-1. Tips for better use of [SSH](./guides/ssh.md).
+The following guides are of things I have done and encountered. During the process I either thought that this would be useful for someone else or thought that it would be useful for myself in the future. If you do stumble upon this and try to use something from one of the guides and it doesn't work, go ahead and let me know by opening an issue. I'm not checking anything on here until I actually use it again. Some things may also be much more detailed than others just due to the amount of time I've put into it. 
 
-2. Setting up a [Skyfactory 3](./guides/skyfactory3.md) server is way easier than anticipated.
+## Tools
+- Tips for better use of [SSH](./tools/ssh.md).
+- Helpful [Git](./tools/git.md) Tips can be found here.
+- [Testing Memory](./tools/memtester.md) (RAM).
+-  Install Node and npm with the [Node Version Manager](./tools/install_node_ubuntu.md) (nvm).
+-  [Python Virtual Environments](./tools/python_venv.md) are good to know how to use.
 
-3. Minecraft [Addons](./guides/minecraft_addons.md) that I've used are listed here.
+## Linux Management
+- Remove the [Boot Logo](./linux_management/rm_boot_logo.md) on Ubuntu.
+- Change the [Hostname](./linux_management/hostname.md) of your linux system.
+- Perform [User Modifications](./linux_management/linux_user_mods.md) such as changing the username and home directory.
 
-4. [Screensaver instructions](./guides/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
+## Self Hosting
+- Stream with [Stremio](./self_hosting/stremio.md)
+- Host a server to store and read books with [Kavita](./self_hosting/kavita.md)
 
-5. How to use a Selenium like library in Rust. A [Thirtyfour](./guides/thirtyfour.md) tutorial is provided that will fetch the Merriam Webster word of the day.
+## Hacks & Mods
+- Instructions for [sideloading](./hacks_and_mods/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)
 
-6. Helpful [Git](./guides/git.md) Tips can be found here. I will update these as more things come in handy.
+## Projects
+- How to use a Selenium like library in Rust. A [Thirtyfour](./projects/thirtyfour.md) tutorial is provided that will fetch the Merriam Webster word of the day.
+- Making a [USB Rubber Ducky with a Raspberry Pi Pico](./projects/pico-ducky/pico-ducky.md)
 
-7. Remove the [Boot Logo](./guides/rm_boot_logo.md) on Ubuntu.
+## Raspberry Pi
+- [Overclock](./raspberry_pi/rpi_overclocking.md) a Raspberry Pi.
+- [Raspberry Pi Cases](./raspberry_pi/rpi_cases.md) I've used.
 
-8. [Testing Memory](./guides/memtester.md) (RAM).
+## Video Games
+- Setting up a [Skyfactory 3](./video_games/skyfactory3.md) server is way easier than anticipated.
+- Minecraft [Addons](./video_games/minecraft_addons.md) that I've used are listed here.
+- Some tips for [Gaming](./video_games/gaming_on_linux.md) on Linux.
+- Everything you need to know about setting up a [Terraria Server](./video_games/terraria.md). The guide runs through a vanilla server, a modded server on your machine, a dedicated server for modded terraria, and how to setup a TShock server which gives more administrative abilities.
 
-9. Some tips for [Gaming](./guides/gaming_on_linux.md) on Linux.
+## Miscellaneous
+- [Screensaver instructions](./miscellaneous/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
 
-10. Instructions for [sideloading](./guides/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)
-
-11. Install Node and npm with the [Node Version Manager](./guides/install_node_ubuntu.md) (nvm).
-    
-12. Change the [Hostname](./guides/hostname.md) of your linux system.
-
-13. Perform [User Modifications](./guides/linux_user_mods.md) such as changing the username and home directory.
-
-14. [Overclock](./guides/rpi_overclocking.md) a Raspberry Pi.
-
-15. [Raspberry Pi Cases](./guides/rpi_cases.md) I've used.
-
-16. Everything you need to know about setting up a [Terraria Server](./guides/terraria.md). The guide runs through a vanilla server, a modded server on your machine, a dedicated server for modded terraria, and how to setup a TShock server which gives more administrative abilities.
-
-17. Making a [USB Rubber Ducky with a Raspberry Pi Pico](./guides/pico-ducky/pico-ducky.md)
-
-18. Stream with [Stremio](./guides/stremio.md)
-
-19. Host a server to store and read books with [Kavita](./guides/kavita.md)
-
-20. [Python Virtual Environments](./guides/python_venv.md) are good to know how to use.
