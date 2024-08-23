@@ -37,3 +37,5 @@
 18. Stream with [Stremio](./guides/stremio.md)
 
 19. Host a server to store and read books with [Kavita](./guides/kavita.md)
+
+20. [Python Virtual Environments](./guides/python_venv.md) are good to know how to use.
