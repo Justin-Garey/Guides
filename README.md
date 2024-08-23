@@ -38,3 +38,11 @@ The following guides are of things I have done and encountered. During the proce
 ## Miscellaneous
 - [Screensaver instructions](./miscellaneous/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
 
+## Future Guides & Topics
+- Kodi is the streaming frontend I use. I would like a setup guide for this for when I need to do it again. It's not a very complicated process but takes a little bit of time.
+- Jellyfin is the opensource version of Plex. I really want a plex like server to store my movies and tv shows for kodi to grab from and for the web interface so I could just vpn into home and watch movies from afar.
+- The Pwnagatchi is a really cool little hacking device but I needed to get some cables to get it set up. Once I have time to work on this more, the guide and supporting files will be added. I'm really excited for this because I want to learn more about how Wi-Fi works and this is perfectly hands on.
+- How to add a user in linux and adding that user to groups. This would be a modification to the [user modifications](./linux_management/linux_user_mods.md) file.
+- Home Assistant is another application I will setup and once I do a guide will follow along with it.
+- A guide on Obsidian.md is on its way. I just started using it and want to add some plugins before I get into a guide for it.
+- Zotero is a great tool for tracking papers, documents, articles, books, etc.. 
