@@ -14,6 +14,9 @@ The following guides are of things I have done and encountered. During the proce
 - Change the [Hostname](./linux_management/hostname.md) of your linux system.
 - Perform [User Modifications](./linux_management/linux_user_mods.md) such as changing the username and home directory.
 
+## Scripts
+- This [category](./scripts/scripts.md) is a reference to one way I manage useful scripts I create and how to access them easily. This is helpful for having global access to scripts I use.
+
 ## Self Hosting
 - Stream with [Stremio](./self_hosting/stremio.md)
 - Host a server to store and read books with [Kavita](./self_hosting/kavita.md)
