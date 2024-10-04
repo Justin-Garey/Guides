@@ -11,7 +11,7 @@ The following guides are of things I have done and encountered. During the proce
 
 ## Linux Management
 - Remove the [Boot Logo](./linux_management/rm_boot_logo.md) on Ubuntu.
-- Change the [Hostname](./linux_management/hostname.md) of your linux system.
+- Change the [hostname](./linux_management/hostname.md) of your Linux system.
 - Perform [User Modifications](./linux_management/linux_user_mods.md) such as changing the username and home directory.
 
 ## Scripts
@@ -20,6 +20,7 @@ The following guides are of things I have done and encountered. During the proce
 ## Self Hosting
 - Stream with [Stremio](./self_hosting/stremio.md)
 - Host a server to store and read books with [Kavita](./self_hosting/kavita.md)
+- Watch movies and TV from [Kodi](./self_hosting/kodi.md)
 
 ## Hacks & Mods
 - Instructions for [sideloading](./hacks_and_mods/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)
@@ -42,7 +43,6 @@ The following guides are of things I have done and encountered. During the proce
 - [Screensaver instructions](./miscellaneous/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
 
 ## Future Guides & Topics
-- Kodi is the streaming frontend I use. I would like a setup guide for this for when I need to do it again. It's not a very complicated process but takes a little bit of time.
 - Jellyfin is the opensource version of Plex. I really want a plex like server to store my movies and tv shows for kodi to grab from and for the web interface so I could just vpn into home and watch movies from afar.
 - The Pwnagatchi is a really cool little hacking device but I needed to get some cables to get it set up. Once I have time to work on this more, the guide and supporting files will be added. I'm really excited for this because I want to learn more about how Wi-Fi works and this is perfectly hands on.
 - How to add a user in linux and adding that user to groups. This would be a modification to the [user modifications](./linux_management/linux_user_mods.md) file.
