@@ -13,6 +13,7 @@ The following guides are of things I have done and encountered. During the proce
 - Remove the [Boot Logo](./linux_management/rm_boot_logo.md) on Ubuntu.
 - Change the [hostname](./linux_management/hostname.md) of your Linux system.
 - Perform [User Modifications](./linux_management/linux_user_mods.md) such as changing the username and home directory.
+- [Enter the BIOS](./linux_management/enter_bios.md) menu without the function keys.
 
 ## Scripts
 - This [category](./scripts/scripts.md) is a reference to one way I manage useful scripts I create and how to access them easily. This is helpful for having global access to scripts I use.
