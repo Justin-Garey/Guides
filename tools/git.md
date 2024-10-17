@@ -54,3 +54,4 @@ To undo the most recent local commit:
 git reset HEAD~
 ```
 - This will leave the files unchanged but all of the modifications will need added and committed again.
+- This is useful when you've made local changes and a commit that you want to push but the main branch is already ahead of you.
