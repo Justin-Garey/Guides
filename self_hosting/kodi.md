@@ -210,3 +210,8 @@ This is useful in case an add-on fails to install in the future. Go to `Settings
 Umbrella is not scraping for content
 - Received notification: `External providers are enabled but...`
 - Solution: Make sure CocoScrapers is selected as the `External Provider`
+## Controlling Kodi
+
+I primarily use a wireless keyboard when setting up Kodi, but that isn't ideal for regular use. Other options include using an add-on for controller support, the mobile app for phone control, or (as I am doing now) a miniature wireless keyboard. The mini keyboard I am using now is a Rii miniature wireless keyboard.
+
+![Rii Miniature Wireless Keyboard with Trackpad](../images/rii_mini_keyboard.jpg)
