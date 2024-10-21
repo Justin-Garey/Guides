@@ -26,9 +26,9 @@ index 149d1e2..7c2118a 100644
 +When using open source software, I find myself making small changes that are very specific to what I am doing but it's not enough to make a fork of the repository and track in a separate branch. There are so few changes that it's easier to just make a document outlining them and where to apply them. An easier way to do this is with a patch. A patch file is the textual output from a `git diff` that Git can understand when you want to apply it to the code. This is handy when the same codebase is used in multiple locations and can be used for automated setup, or for quicker manual setup.
 ```
 
-To save these into a patch file, redirect the standard output into `my_patch.patch`.  
+To save these staged changes into a patch file, redirect the standard output into `my_patch.patch`.  
 ```
-git diff > my_patch.patch
+git diff --cached --no-color > gnb.patch > my_patch.patch
 ```
 
 Then the changes can be applied to a repository without the changes.
