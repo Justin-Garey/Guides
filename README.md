@@ -9,6 +9,7 @@ The following guides are of things I have done and encountered. During the proce
 -  Install Node and npm with the [Node Version Manager](./tools/install_node_ubuntu.md) (nvm).
 -  [Python Virtual Environments](./tools/python_venv.md) are good to know how to use.
 - [Zotero](./tools/zotero.md) is useful for collecting and managing references.
+- Using [Obsidian](./tools/obsidian.md) for note taking has been amazing.
 
 ## Linux Management
 - Remove the [Boot Logo](./linux_management/rm_boot_logo.md) on Ubuntu.
