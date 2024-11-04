@@ -1,13 +1,13 @@
 # Guides
 
-The following guides are of things I have done and encountered. During the process I either thought that this would be useful for someone else or thought that it would be useful for myself in the future. If you do stumble upon this and try to use something from one of the guides and it doesn't work, go ahead and let me know by opening an issue. I'm not checking anything on here until I actually use it again. Some things may also be much more detailed than others just due to the amount of time I've put into it. 
+The following guides are of things I have done and encountered. During the process I either thought that this would be useful for someone else or thought that it would be useful for myself in the future. If you do stumble upon this and try to use something from one of the guides and it doesn't work, go ahead and let me know by opening an issue. I'm not checking anything on here until I actually use it again. Some things may also be much more detailed than others just due to the amount of time I've put into it.
 
 ## Tools
 - Tips for better use of [SSH](./tools/ssh.md).
 - Helpful [Git](./tools/git.md) Tips can be found here.
 - [Testing Memory](./tools/memtester.md) (RAM).
--  Install Node and npm with the [Node Version Manager](./tools/install_node_ubuntu.md) (nvm).
--  [Python Virtual Environments](./tools/python_venv.md) are good to know how to use.
+- Install Node and npm with the [Node Version Manager](./tools/install_node_ubuntu.md) (nvm).
+- [Python Virtual Environments](./tools/python_venv.md) are good to know how to use.
 - [Zotero](./tools/zotero.md) is useful for collecting and managing references.
 - Using [Obsidian](./tools/obsidian.md) for note taking has been amazing.
 
@@ -24,6 +24,7 @@ The following guides are of things I have done and encountered. During the proce
 - Stream with [Stremio](./self_hosting/stremio.md)
 - Host a server to store and read books with [Kavita](./self_hosting/kavita.md)
 - Watch movies and TV from [Kodi](./self_hosting/kodi.md)
+- Use [Proxmox](./self_hosting/proxmox.md) to create and manage virtual machines
 
 ## Hacks & Mods
 - Instructions for [sideloading](./hacks_and_mods/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)
@@ -50,5 +51,3 @@ The following guides are of things I have done and encountered. During the proce
 - The Pwnagatchi is a really cool little hacking device but I needed to get some cables to get it set up. Once I have time to work on this more, the guide and supporting files will be added. I'm really excited for this because I want to learn more about how Wi-Fi works and this is perfectly hands on.
 - How to add a user in linux and adding that user to groups. This would be a modification to the [user modifications](./linux_management/linux_user_mods.md) file.
 - Home Assistant is another application I will setup and once I do a guide will follow along with it.
-- A guide on Obsidian.md is on its way. I just started using it and want to add some plugins before I get into a guide for it.
-- Zotero is a great tool for tracking papers, documents, articles, books, etc.. 
