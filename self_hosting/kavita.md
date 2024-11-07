@@ -1,5 +1,4 @@
 # Kavita Books Library
-
 ## Install and Run Kavita as a Binary
 
 The basic install steps can be found [here](https://github.com/Kareadita/Kavita/blob/develop/INSTALL.txt)
@@ -70,7 +69,7 @@ In Settings, under Account and Customize
 This part could be done by hand but is better organized with Calibre. See [below](#calibre). Although a series of books in PDF format should be done by hand.
 
 For a PDF series, start with Calibre since it will organize books based on author and the files are easy to move around. As an example, let's assume you have the Inheritance Cycle by Christopher Paolini. Calibre would sort the books into individual book title folders within the folder *Paolini, Christopher*. Kavita will not pick these up as a series since PDFs don't contain a standard metadata. Kavita will however pick up on naming conventions for *[Specials](https://wiki.kavitareader.com/guides/scanner/managefiles)* due to the lack of metadata. This involves having the series name as a directory under *Paolini, Christopher*, then each book in the series is named as [series] SPO[place in series] [book title]. This would look like
-```bash
+```none
 books_library
 |- Paolini, Christopher
    |- Inheritance Cycle
@@ -119,7 +118,7 @@ Calibre is a great tool for organizing a book collection and editing the metadat
 ### File Structure
 
 By default, Calibre exports the books by {author_sort}/{title}/{title} - {authors}. For the *Inheritance Cycle* example, that would look like
-```bash
+```none
 |- Paolini, Christopher
    |- Eragon
       |- Eragon - Christopher Paolini.pdf
