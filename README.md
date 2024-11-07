@@ -47,6 +47,7 @@ The following guides are of things I have done and encountered. During the proce
 ## Miscellaneous
 - [Screensaver instructions](./miscellaneous/screensaver.md) for general use and specifically my Raspberry Pi mounted on the wall with a screen.
 - Instructions on connecting a [ftp server](./miscellaneous/ubuntu_connect_to_remote_ftp_server.md) to Ubuntu file system.
+- Change your default [shell](./miscellaneous/set_shell.md).
 
 ## Future Guides & Topics
 - Jellyfin is the opensource version of Plex. I really want a plex like server to store my movies and tv shows for kodi to grab from and for the web interface so I could just vpn into home and watch movies from afar.
