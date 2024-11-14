@@ -17,7 +17,7 @@ services:
         container_name: kavita
         volumes:
             - /media/networkshare/Textbooks:/textbooks
-            - /media/networkshare/Books:/books
+            - /media/networkshare/BooksRoot:/books
             - ./data:/kavita/config
         environment:
             - TZ=America/New_York
@@ -66,9 +66,19 @@ In Settings, under Account and Customize
 - Lastly select the *Libraries* the user will have access to and the *Roles* the user should have
 ### Adding Books
 
-This part could be done by hand but is better organized with Calibre. See [below](#calibre). Although a series of books in PDF format should be done by hand.
+This part could be done by hand but is better organized with Calibre. See [below](#calibre). Although a series of books in PDF format should be done by hand. For general formatting, you'll want a `root` directory containing the `books` directory where the author folders from Calibre are stored. Kavita will still work if you do not have the `root` directory but it will not [pick up series with changing authors correctly](https://github.com/Kareadita/Kavita/issues/1612). The structure would look like:
+```
+BooksRoot
+|- Books
+   |- Author 1
+      |- Series 1
+         |- Book 1
+   |- Author 2
+      |- Series 1
+         |- Book 2
+```
 
-For a PDF series, start with Calibre since it will organize books based on author and the files are easy to move around. As an example, let's assume you have the Inheritance Cycle by Christopher Paolini. Calibre would sort the books into individual book title folders within the folder *Paolini, Christopher*. Kavita will not pick these up as a series since PDFs don't contain a standard metadata. Kavita will however pick up on naming conventions for *[Specials](https://wiki.kavitareader.com/guides/scanner/managefiles)* due to the lack of metadata. This involves having the series name as a directory under *Paolini, Christopher*, then each book in the series is named as [series] SPO[place in series] [book title]. This would look like
+For a PDF series, start with Calibre since it will organize books based on author and the files are easy to move around. As an example, let's assume you have the Inheritance Cycle by Christopher Paolini. Calibre would sort the books into individual book title folders within the folder *Paolini, Christopher*. Kavita will not pick these up as a series since PDFs don't contain a standard metadata. Kavita will however pick up on naming conventions for *[Specials](https://wiki.kavitareader.com/guides/scanner/managefiles)* due to the lack of metadata. This involves having the series name as a directory under *Paolini, Christopher*, then each book in the series is named as `<series> SPO<place in series> <book title>.<extension>`. This would look like
 ```none
 books_library
 |- Paolini, Christopher
