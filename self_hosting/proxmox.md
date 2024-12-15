@@ -141,6 +141,9 @@ pve-manager/8.2.2/9355359cd7afbae4 (running kernel: 6.8.4-2-pve)
 ```
 
 Running ```pveversion --verbose``` will result in much more detailed information.
+### Scheduled Rebooting
+
+[[cron|Cron]] is a good tool for scheduling a reboot of VMs that need it. If Proxmox is only being used to run services, then a weekly reboot can be scheduled on the Proxmox machine itself. The example from the Cron document is made for my own Proxmox installation.
 ## References
 
 - [Proxmox Website](https://www.proxmox.com/en/)
