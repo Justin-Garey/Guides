@@ -63,8 +63,21 @@ Plugins are vault specific so a plugin installed in one vault will not be seen o
 	- Remove Empty Lines Between List Markers and Checklists
 	- Remove Link Spacing
 	- Trailing Spaces
+## Set up Git on Linux Desktop
 
+- My repository is already connected to my remote repository in Gitea
+- After installing the [Git plugin](https://publish.obsidian.md/git-doc/Getting+Started), I configured these settings
+	- *Auto commit-and-sync interval (minutes)* to *10*
+	- *Pull on startup* to ON
+	- *Show the count of modified files in the status bar* to ON
+## Set up Git on iPhone
+
+- This is more complicated than on desktop Linux but there is a method using iSH (a shell for iOS)
+	- This [obsidian forum](https://forum.obsidian.md/t/mobile-ios-app-to-work-with-hidden-folder/25741) post explains how to find the Obsidian notebooks.
+	- Once in the Notebook, git can be used from iSH to clone the repository.
+	- Then the git plugin can be configured as it would on desktop.
 ## Resources
 - [Obsidian](https://obsidian.md/)
 - [Obsidian Docs](https://help.obsidian.md/Home)
 - [Videos by Nicole van der Hoeven](https://www.youtube.com/@nicolevdh)
+- [Git Plugin](https://publish.obsidian.md/git-doc/Getting+Started) for Obsidian
