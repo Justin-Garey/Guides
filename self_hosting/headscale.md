@@ -84,7 +84,7 @@ sudo tailscale up --login-server http://<EC2_INSTANCE_ADDRESS> --auth-key <AUTH_
 5. Enter the address of the Headscale server (i.e. `http://<EC2_INSTANCE_ADDRESS>`) and select login.
 6. Instructions for what to enter into the Headscale server should pop up. Make sure the user is created first then the instructions are similar to:
 ```bash
-sudo headscale nodes register --user <USER_NAME> --key mkey:512ca8a95023ea4fa36acb14b02895db9ce02caa32eadce593dfeb47acdf944e
+sudo headscale nodes register --user <USER_NAME> --key mkey:<MKEY>
 ```
 ## Headscale Operation
 
