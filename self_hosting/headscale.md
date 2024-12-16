@@ -1,6 +1,6 @@
 # [Headscale](https://headscale.net/)
 
-This is a self hosted and open source alternative to the [[tailscale|Tailscale]] control server.
+This is a self hosted and open source alternative to the [Tailscale](./tailscale.md) control server.
 ## Host Setup
 
 Since the control server for the Tailnet needs to be hosted outside of my home network, I am using an EC2 instance on Amazon. The EC2 instance is configured with:
@@ -68,7 +68,7 @@ sudo headscale preauthkeys create -e 99y --reusable --user <USER_NAME>
 - This came in handy on my laptop which was having issues connecting after a reboot.
 ## Connect the Tailscale Node (Linux)
 
-See the [[tailscale|Tailscale]] doc for more on setting up Tailscale. If you have already connected Tailscale to a control server previously, run `sudo apt purge tailscale -y && sudo apt install tailscale -y` as Tailscale has some hiccups when it comes to making new connections. This also goes for when you've already connected to the same Headscale server before.
+See the [Tailscale](./tailscale.md) doc for more on setting up Tailscale. If you have already connected Tailscale to a control server previously, run `sudo apt purge tailscale -y && sudo apt install tailscale -y` as Tailscale has some hiccups when it comes to making new connections. This also goes for when you've already connected to the same Headscale server before.
 
 To connect to the Headscale control server:
 ```bash
