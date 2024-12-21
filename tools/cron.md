@@ -1,6 +1,6 @@
 # Cron
 
-[Cron](https://en.wikipedia.org/wiki/Cron) is a command line tool for scheduling jobs that need to automatically happen at a predetermined time. An example of when to use cron is for a server that should be rebooted once a week. Using this [cron editor tool](https://crontab.guru/), I can plan a job to happen every Thursday at 3 A.M. with `0 3 * * 4`. The example from Wikipedia shows how the timing is configured:
+[Cron](https://en.wikipedia.org/wiki/Cron) is a command line tool for scheduling jobs that need to automatically happen at a predetermined time. An example of when to use Cron is for a server that should be rebooted once a week. Using this [Cron editor tool](https://crontab.guru/), I can plan a job to happen every Thursday at 3 A.M. with `0 3 * * 4`. The example from Wikipedia shows how the timing is configured:
 ```text
 # * * * * * <command to execute>
 # | | | | |

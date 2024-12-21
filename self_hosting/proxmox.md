@@ -10,7 +10,7 @@
 		1. Make sure to insert the name of the USB drive and the path to the Proxmox ISO
 ### Boot from ISO
 
-- You'll need to boot from the iso file on the flash drive. This can be done a few ways, either using the function keys to get into the boot menu or by using a command to reboot into the bios ([linux method](../linux_management/enter_bios.md)).
+- You'll need to boot from the ISO file on the flash drive. This can be done a few ways, either using the function keys to get into the boot menu or by using a command to reboot into the bios ([Linux method](../linux_management/enter_bios.md)).
 ### Terminal UI Setup
 
 1. After booting up Proxmox, there will be an option to Install the Graphical or Terminal UI version. Select the Terminal UI installation.

@@ -73,3 +73,12 @@ git push -u origin main
 The git repository should be in the format of ```ssh://it@192.168.0.101:2020/Justin-Garey/Notebook.git```. There are two steps to fixing this:
 1. Set ```SSH_PORT``` to `2020` in *~/data/gitea/conf/app.ini*
 2. Add `USE_COMPAT_SSH_URI = false` under `[repository]` in *~/data/gitea/conf/app.ini*
+### While using a VPN with DNS, Gitea wants to clone from local network IP address
+
+In *~/data/gitea/conf/app.ini*, set `DOMAIN`, `SSH_DOMAIN`, and `ROOT_URL` to use the domain name given to the server. In my case the server settings were changed to:
+```ini
+DOMAIN = gitea.micasa.local
+SSH_DOMAIN = gitea.micasa.local
+HTTP_PORT = 3000
+ROOT_URL = http://gitea.micasa.local/
+```

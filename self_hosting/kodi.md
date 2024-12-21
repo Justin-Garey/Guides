@@ -7,7 +7,7 @@
 ## Installation for Ubuntu 22.04 on X86 HW
 
 Kodi can be [installed](https://kodi.wiki/view/HOW-TO:Install_Kodi_for_Linux?https=1) on Ubuntu by adding the Kodi PPA. If you've installed Kodi already through your system (i.e. with ```apt```), remove it first with ```sudo apt purge kodi\*``` then install by:
-```
+```bash
 sudo apt install software-properties-common
 sudo add-apt-repository -y ppa:team-xbmc/ppa
 sudo apt install kodi
@@ -16,7 +16,7 @@ sudo apt install kodi
 **Now Kodi can be started!**
 
 For reference, to uninstall Kodi:
-```
+```bash
 sudo apt purge kodi\*
 tar cf - "${HOME}/.kodi/" | xz -z9e - >"${HOME}/kodi-backup_$(date +%m%d%y-%H%M).tar.xz"
 rm -Ri "${HOME}/.{kodi,xbmc}/"
@@ -41,7 +41,7 @@ Using the Raspberry Pi Imager, we can flash a micro-SD card with LibreELEC. Firs
 On the first startup, Kodi will prompt you for the language. After pressing next, the hostname can be configured. I changed my hostname to something more fun but it is not that important. The next item to configure is for networking. Go ahead and select the network to use and enter the password. Once the network is online, hit next. For `Sharing and Remote Access`, Samba is enabled by default and I enabled SSH. The default user and password is `root`:`libreelec`. After enabling SSH, Kodi will prompt you to change the root password. The next section is a thank you message as initial setup is complete!
 ## Modify Some Settings
 
-From the base page of Kodi, select the settings icon.  When in each menu, make sure the ```Expert``` settings are being displayed. This can be toggled in the bottom left of the screen. The following settings changes have been copied from a [guide](https://www.reddit.com/r/Addons4Kodi/comments/zzfdtb/allinclusive_kodi_guide_for_beginners_movie_and/) on Reddit.
+From the base page of Kodi, select the settings icon. When in each menu, make sure the ```Expert``` settings are being displayed. This can be toggled in the bottom left of the screen. The following settings changes have been copied from a [guide](https://www.reddit.com/r/Addons4Kodi/comments/zzfdtb/allinclusive_kodi_guide_for_beginners_movie_and/) on Reddit.
 - Player > Language > Preferred audio language = English (Important - Prevent streams from defaulting to foreign audio)
 - Player > Language > Preferred subtitle language = English (Important - Prevents streams from defaulting to foreign subtitles)
 - Media > General > Show parent items = Off (Prevents a back button being shown that leads to your file manager when navigating a series' season later in the guide)
@@ -62,7 +62,7 @@ From the base page of Kodi, select the settings icon.  When in each menu, make s
 9. Select ```Open Wizard``` then select the zip file
 10. Go back and select ```Install from repository```
 11. Select ```OpenWizard Repository```, ```Program add-ons```, and ```OpenWizard```
-12. Open Wizard is now installed! 
+12. Open Wizard is now installed!
 ## Other Add-ons to Install
 
 - [Umbrella](https://github.com/umbrellaplug/umbrellaplug.github.io): https://umbrellaplug.github.io/
@@ -70,13 +70,13 @@ From the base page of Kodi, select the settings icon.  When in each menu, make s
 - [CocoScrapers](https://github.com/CocoJoe2411/repository.cocoscrapers): https://cocojoe2411.github.io/
 ## Kodi Add-ons to Install
 
-`Settings` > `Add-ons` > `Install from respository` > ```Kodi Add-on repository``` > Category > Add-on
+`Settings` > `Add-ons` > `Install from respository` > `Kodi Add-on repository` > Category > Add-on
 - Context menus
 	- Trakt - Add to watchlist button
 	- Trakt - Context menu
 	- Trakt - Watched button
 	- Trakt - Rating button
--  Program Add-ons
+- Program Add-ons
 	- Log Viewer for Kodi
 		- View logs in the browser or within Kodi
 	- Trakt
@@ -87,15 +87,15 @@ From the base page of Kodi, select the settings icon.  When in each menu, make s
 The default skin is Estuary which sometimes has issues with add-ons. Switching skins can fix this. It also seems like if you go back to Estuary after, then it would fix the problem.
 
 1. Enter Settings
-2. Select ```Interface```
-3. Select ```Skin``` from the left menu
-4. Select ```Skin``` from the options menu
-5. Navigate to ```Get More``` and select ```Arctic: Zephyr - Reloaded``` (AZR)
+2. Select `Interface`
+3. Select `Skin` from the left menu
+4. Select `Skin` from the options menu
+5. Navigate to ```Get More``` and select `Arctic: Zephyr - Reloaded (AZR)`
 
 I will be using AZR for the remainder of this tutorial.
 ## Configuring Umbrella
 
-The add-on settings can be found in ```Settings``` > ```Add-ons``` > ```My add-ons``` > ```Video add-ons``` > ```Umbrella``` > ```Configure```. 
+The add-on settings can be found in `Settings` > `Add-ons` > `My add-ons` > `Video add-ons` > `Umbrella` > `Configure`.
 ### Enable CocoScrapers for Umbrella
 
 After entering the configuration menu for Umbrella, make your way to the `Providers` tab on the left menu. Check the box beside `Enable External Providers` then select the `External Provider:` option. Scroll down and select `CocoScrapers`.
@@ -107,7 +107,7 @@ Staying within the configuration menu, enter the `Accounts(Debrid)` tab. You wil
 In the configuration menu, enter the `Trakt` tab and select `Authorization`. A pop up with a trakt.tv [link](https://trakt.tv/activate) and a code will be provided. A trakt account will be needed for this to work. After authorizing Umbrella, the link and code will automatically go away.
 ### Sources Sorting and Filtering
 
-In the Umbrella configuration menu, under the `Sorting and Filters` tab,  we can optimize which source options we're given when trying to watch something . Under the `Source Filtering Options`, we can set the `Max Quality` to whatever device we are using can handle. For me that is 1080p. I also set a max size for movies of ~15 GB. Then further down, we can turn off a removed duplicates popup. Also, in the `Source Filtering (Video)` section, select `Remove Dolby Vision`.
+In the Umbrella configuration menu, under the `Sorting and Filters` tab, we can optimize which source options we're given when trying to watch something . Under the `Source Filtering Options`, we can set the `Max Quality` to whatever device we are using can handle. For me that is 1080p. I also set a max size for movies of ~15 GB. Then further down, we can turn off a removed duplicates popup. Also, in the `Source Filtering (Video)` section, select `Remove Dolby Vision`.
 ### Continuous Play for TV Shows
 
 Under `TV Shows` > `Continuous Episode Playback Settings`
@@ -202,7 +202,7 @@ This is useful in case an add-on fails to install in the future. Go to `Settings
 - `Esc`: Escape to top the top level
 ## References and Resources
 
-- [Reddit Guide](https://www.reddit.com/r/Addons4Kodi/comments/zzfdtb/allinclusive_kodi_guide_for_beginners_movie_and/) 
+- [Reddit Guide](https://www.reddit.com/r/Addons4Kodi/comments/zzfdtb/allinclusive_kodi_guide_for_beginners_movie_and/)
 - [LibreELEC.tv](https://libreelec.tv/)
 - [Raspberry Pi Software](https://www.raspberrypi.com/software/)
 ## Issues

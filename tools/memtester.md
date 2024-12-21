@@ -1,11 +1,11 @@
 # Memory Testing RAM Cards
 
-To run memtester ```sudo memtester 24G 5```. Where 24G is the memory to test and 5 is the number of iterations to perform.
+To run memtester ```sudo memtester 24G 5```. Where `24G` is the memory to test and `5` is the number of iterations to perform.
 
 ## Testing Output
 
 When running ```sudo memetester 1G 1```, the output is
-```
+```log
 memtester version 4.5.1 (64-bit)
 Copyright (C) 2001-2020 Charles Cazabon.
 Licensed under the GNU General Public License version 2 (only).

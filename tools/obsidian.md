@@ -10,7 +10,7 @@ I have Obsidian set to `Dark Mode` with the `Things` theme.
 Plugins are vault specific so a plugin installed in one vault will not be seen or used in another unless also installed in that other vault. Commonly used plugins and ones that I use:
 - Dataview
 	- Allows querying among your notes, transforming your notebook into a database.
-	- Two videos on Youtube are great for the basics: [Video 1](https://youtu.be/ccN5vJzXwvo?si=BltJmQh4q2HRXaDg), [Video 2](https://youtu.be/JTObSymEvWA?si=_As8YrZ95TeC19Ws)
+	- Two videos on YouTube are great for the basics: [Video 1](https://youtu.be/ccN5vJzXwvo?si=BltJmQh4q2HRXaDg), [Video 2](https://youtu.be/JTObSymEvWA?si=_As8YrZ95TeC19Ws)
 - Advanced Tables
 	- Markdown tables are automatically formatted
 	- Starts simply by entering `| Col 1|`, hit `Enter`, then `|-|` will create the automatically formatting table

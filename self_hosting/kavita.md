@@ -67,7 +67,7 @@ In Settings, under Account and Customize
 ### Adding Books
 
 This part could be done by hand but is better organized with Calibre. See [below](#calibre). Although a series of books in PDF format should be done by hand. For general formatting, you'll want a `root` directory containing the `books` directory where the author folders from Calibre are stored. Kavita will still work if you do not have the `root` directory but it will not [pick up series with changing authors correctly](https://github.com/Kareadita/Kavita/issues/1612). The structure would look like:
-```
+```none
 BooksRoot
 |- Books
    |- Author 1
@@ -91,26 +91,25 @@ books_library
 
 When I've updated the books in my local storage from Calibre or manually, I use rsync to copy the new files/folders to the machine running Kavita.
 ```bash
-rsync -r --ignore-existing ~/DigitalLibraries/Books/ argonite:~/DigitalLibraries/Books/
+rsync -a --ignore-existing ~/DigitalLibraries/Books/ argonite:~/DigitalLibraries/Books/
 ```
 - -r is for recursive copy
 - --ignore-existing prevents the copy from wasting resources and overwriting existing files
 ### Smart Filters
 
-A smart filter can be used to sort books on the side nav or in the dashboard. This is especially handy if you want to see all of the books you have or have not read.
+A smart filter can be used to sort books on the side navigation bar or in the dashboard. This is especially handy if you want to see all of the books you have or have not read.
 
 To create a smart filter:
 - Click your account in the top right and select *Smart Filters*
+- Click the funnel icon under the account icon in the top right
 - Make the second filter *Read Progress* *Equals* *100*
 - Click *Apply* to see it happen
 - Change the *Filter Name* to *Completed Books*
 - Hit *Save*
-- Now click the three dots icon next to *Home* on the side nav
-- Select *Customize*
-- Finally, add the smart filter
+- Under *Customize* in the settings, smart filters can be used 
 ## Calibre
 
-Calibre is a great tool for organizing a book collection and editing the metadata of epubs. Basic use is as follows:
+Calibre is a great tool for organizing a book collection and editing the metadata of EPUB books. Basic use is as follows:
 - Download desired book or books
 - Drag and drop into Calibre or Click the *Add books* button and select your books
 - Right Click on the book you want to edit and hover over *Edit metadata* then select *Edit metadata individually*
