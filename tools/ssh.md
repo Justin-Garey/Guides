@@ -49,7 +49,10 @@ PermitRootLogin yes
 ```
 - Here its just been added under the commented default entry.
 
-After saving the file, restart the sshd server with `systemctl restart ssh`.
+After saving the file, restart the sshd server with:
+```bash 
+systemctl restart ssh
+```
 
 **Remember to remove the added line after completing your task**
 
