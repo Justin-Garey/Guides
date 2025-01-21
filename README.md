@@ -33,6 +33,7 @@ The following guides are of things I have done and encountered. During the proce
 ## Projects
 - How to use a Selenium like library in Rust. A [Thirtyfour](./projects/thirtyfour.md) tutorial is provided that will fetch the Merriam Webster word of the day.
 - Making a [USB Rubber Ducky with a Raspberry Pi Pico](./projects/pico-ducky/pico-ducky.md)
+- A simple [recipe scraper](./projects/recipe_scraper/README.md) so you can finally start on that recipe book you've told everyone about.
 
 ## Raspberry Pi
 - [Overclock](./raspberry_pi/rpi_overclocking.md) a Raspberry Pi.
