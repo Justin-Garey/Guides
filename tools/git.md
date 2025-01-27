@@ -32,7 +32,7 @@ index 149d1e2..7c2118a 100644
 
 To save these staged changes into a patch file, redirect the standard output into `my_patch.patch`.
 ```bash
-git diff --cached --no-color > gnb.patch > my_patch.patch
+git diff --cached --no-color > my_patch.patch
 ```
 
 Then the changes can be applied to a repository without the changes.
