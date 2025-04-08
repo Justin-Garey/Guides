@@ -18,11 +18,11 @@
 3. Make sure the target hard disk is correct.
 4. Verify or set the country, timezone, and keyboard layout.
 5. Set the root password and administrator email.
-6. Configure basic networking settings and a hostname. The hostname should be in the form of `hostname.domain`. I set the domain to `local` as its on my local network.
+6. Configure basic networking settings and a hostname. The hostname should be in the form of `hostname.domain`. I set the domain to `local` as it's on my local network.
 7. Verify the information and hit install.
 ### Update the System
 
-After it is setup, as root, run:
+After it's setup, as root, run:
 ```bash
 apt update
 apt upgrade -y
@@ -31,10 +31,10 @@ apt upgrade -y
 
 - The management interface is available on port `8006` at the address given to the Proxmox machine.
 - The web interface will probably be considered a security risk by the browser due to the certificate being self signed and not recognized. The best solution is to just proceed. This [Reddit post](https://www.reddit.com/r/Proxmox/comments/17e0l7z/understanding_implications_of_proxmoxs_selfsigned/) highlights the issue with more options to mitigate it.
-- Upon first time access, you will need to sign in with `root` and the password created at during the set up process.
+- Upon first time access, you will need to sign in with `root` and the password created at during the setup process.
 ## Machine Modifications
 
-- In the BIOS menu, I've set the computer to boot up when being powered on again. Not necessary, but its useful for automating the services I want to run.
+- In the BIOS menu, I've set the computer to boot up when being powered on again. Not necessary, but it's useful for automating the services I want to run.
 ## Using Proxmox
 ### Creating User Accounts
 
@@ -43,41 +43,41 @@ Step one is creating the user in the terminal so ssh into the machine, then run 
 The new user, by default will use `sh` instead of `bash`. See my [note](../miscellaneous/set_shell.md) on setting your default shell.
 
 With `Server View` selected on the left dropdown and `Datacenter` in focus, select the `Users` tab under `Permissions`.
-![Create a user account in Proxmox step 1](proxmox_creating_user_account_step_1.png)
+![Create a user account in Proxmox step 1](../images/proxmox_creating_user_account_step_1.png)
 
 - Hit `Add` and enter the information for the user. Make sure the `Linux PAM standard authentication` realm is selected.
 
 Next, select `Permissions` and `Add`, then `User Permission`. Now for an administrative user, select `Path`: `/`, the user you just created, `Role`: `Administrator`, and make sure the box for `Propagate` is checked.
-![Create a user account in Proxmox step 2](proxmox_creating_user_account_step_2.png)
+![Create a user account in Proxmox step 2](../images/proxmox_creating_user_account_step_2.png)
 ### Add an ISO Image to Proxmox
 
 Drop down the server under `Datacenter` on the left side bar. Click `local` and select `ISO Images`. From here, an image can be uploaded or downloaded from a URL.
-![Add ISO image in Proxmox step 1](proxmox_add_iso_step_1.png)
+![Add ISO image in Proxmox step 1](../images/proxmox_add_iso_step_1.png)
 ### Creating a VM
 
 In the upper right, click the `Create VM` button. Then name the VM.
-![Create a VM in Proxmox step 1](proxmox_create_vm_step_1.png)
+![Create a VM in Proxmox step 1](../images/proxmox_create_vm_step_1.png)
 
 Hit `Next`, then select an ISO image that you loaded earlier.
-![Create a VM in Proxmox step 2](proxmox_create_vm_step_2.png)
+![Create a VM in Proxmox step 2](../images/proxmox_create_vm_step_2.png)
 
 Hit `Next`, the defaults under `System` are fine for basic use cases. For more advanced uses, you may need to set up a OVMF bios.
-![Create a VM in Proxmox step 3](proxmox_create_vm_step_3.png)
+![Create a VM in Proxmox step 3](../images/proxmox_create_vm_step_3.png)
 
 Hit `Next`, the main item under `Disks` to pay attention to is the `Disk size`. This can always be changed later but it would be easier to set it to whatever you need for your desired application.
-![Create a VM in Proxmox step 4](proxmox_create_vm_step_4.png)
+![Create a VM in Proxmox step 4](../images/proxmox_create_vm_step_4.png)
 
 Hit `Next`, then determine how many sockets and cores you need for the machine. Also pay attention to the `type` of CPU as some programs need certain features from the CPU. Using `host` will give all of the host machine features to the VM.
-![Create a VM in Proxmox step 5](proxmox_create_vm_step_5.png)
+![Create a VM in Proxmox step 5](../images/proxmox_create_vm_step_5.png)
 
 Hit `Next`, and set the RAM for the VM.
-![Create a VM in Proxmox step 6](proxmox_create_vm_step_6.png)
+![Create a VM in Proxmox step 6](../images/proxmox_create_vm_step_6.png)
 
 Hit `Next`. The `Network` section doesn't need any modification.
-![Create a VM in Proxmox step 7](proxmox_create_vm_step_7.png)
+![Create a VM in Proxmox step 7](../images/proxmox_create_vm_step_7.png)
 
 Hit `Next` and look over the configuration. If satisfied, click `Finish`.
-![Create a VM in Proxmox step 8](proxmox_create_vm_step_8.png)
+![Create a VM in Proxmox step 8](../images/proxmox_create_vm_step_8.png)
 ### Managing a VM
 
 The VM is fairly intuitive for basic operations. There are options to start, stop, shutdown, etc. in the lower menu bar at the top right of the management interface. These can also be accessed by right clicking on the VM's name.
@@ -95,7 +95,7 @@ apt install sudo
 ```
 ### Remove Root SSH Login for Security
 
-The `PermitRootLogin` line in */etc/ssh/sshd_config* needs commented out to disable root login. Refer to the *[[ssh#Enable Root Login Over SSH|Enable Root Login Over SSH]]* section in the [SSH usage tips guide](../tools/ssh.md)
+The `PermitRootLogin` line in */etc/ssh/sshd_config* needs commented out to disable root login. Refer to the *[Enable Root Login Over SSH](../tools/ssh.md#enable-root-login-over-ssh)* section in the [SSH usage tips guide](../tools/ssh.md)
 ### Nagging Proxmox Subscription Messages
 
 Upon logging into the management interface, I am greeted with this message:
@@ -131,7 +131,7 @@ E: The repository 'https://enterprise.proxmox.com/debian/pve bookworm InRelease'
 N: Updating from such a repository can't be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
-- The solution for this is couple with [[#Nagging Proxmox Subscription Messages]]
+- The solution for this is couple with [Nagging Proxmox Subscription Messages](#nagging-proxmox-subscription-messages)
 ## Miscellaneous
 ### Check the Version of Proxmox
 
@@ -143,7 +143,10 @@ pve-manager/8.2.2/9355359cd7afbae4 (running kernel: 6.8.4-2-pve)
 Running ```pveversion --verbose``` will result in much more detailed information.
 ### Scheduled Rebooting
 
-[[cron|Cron]] is a good tool for scheduling a reboot of VMs that need it. If Proxmox is only being used to run services, then a weekly reboot can be scheduled on the Proxmox machine itself. The example from the Cron document is made for my own Proxmox installation.
+[Cron](../tools/cron.md) is a good tool for scheduling a reboot of VMs that need it. If Proxmox is only being used to run services, then a weekly reboot can be scheduled on the Proxmox machine itself. The example from the Cron document is made for my own Proxmox installation.
+### Ubuntu VM Not Fully Utilizing Allocated Space
+
+When Ubuntu is first setup, it's best to configure it to utilize all available space. If that does not happen and needs to happen later, follow the [resize Ubuntu drive](../linux_management/resize_ubuntu_drive.md) guide.
 ## References
 
 - [Proxmox Website](https://www.proxmox.com/en/)
