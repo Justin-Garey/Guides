@@ -43,41 +43,55 @@ Step one is creating the user in the terminal so ssh into the machine, then run 
 The new user, by default will use `sh` instead of `bash`. See my [note](../miscellaneous/set_shell.md) on setting your default shell.
 
 With `Server View` selected on the left dropdown and `Datacenter` in focus, select the `Users` tab under `Permissions`.
+
 ![Create a user account in Proxmox step 1](../images/proxmox_creating_user_account_step_1.png)
 
 - Hit `Add` and enter the information for the user. Make sure the `Linux PAM standard authentication` realm is selected.
 
 Next, select `Permissions` and `Add`, then `User Permission`. Now for an administrative user, select `Path`: `/`, the user you just created, `Role`: `Administrator`, and make sure the box for `Propagate` is checked.
+
 ![Create a user account in Proxmox step 2](../images/proxmox_creating_user_account_step_2.png)
+
 ### Add an ISO Image to Proxmox
 
 Drop down the server under `Datacenter` on the left side bar. Click `local` and select `ISO Images`. From here, an image can be uploaded or downloaded from a URL.
+
 ![Add ISO image in Proxmox step 1](../images/proxmox_add_iso_step_1.png)
+
 ### Creating a VM
 
 In the upper right, click the `Create VM` button. Then name the VM.
+
 ![Create a VM in Proxmox step 1](../images/proxmox_create_vm_step_1.png)
 
 Hit `Next`, then select an ISO image that you loaded earlier.
+
 ![Create a VM in Proxmox step 2](../images/proxmox_create_vm_step_2.png)
 
 Hit `Next`, the defaults under `System` are fine for basic use cases. For more advanced uses, you may need to set up a OVMF bios.
+
 ![Create a VM in Proxmox step 3](../images/proxmox_create_vm_step_3.png)
 
 Hit `Next`, the main item under `Disks` to pay attention to is the `Disk size`. This can always be changed later but it would be easier to set it to whatever you need for your desired application.
+
 ![Create a VM in Proxmox step 4](../images/proxmox_create_vm_step_4.png)
 
 Hit `Next`, then determine how many sockets and cores you need for the machine. Also pay attention to the `type` of CPU as some programs need certain features from the CPU. Using `host` will give all of the host machine features to the VM.
+
 ![Create a VM in Proxmox step 5](../images/proxmox_create_vm_step_5.png)
 
 Hit `Next`, and set the RAM for the VM.
+
 ![Create a VM in Proxmox step 6](../images/proxmox_create_vm_step_6.png)
 
 Hit `Next`. The `Network` section doesn't need any modification.
+
 ![Create a VM in Proxmox step 7](../images/proxmox_create_vm_step_7.png)
 
 Hit `Next` and look over the configuration. If satisfied, click `Finish`.
+
 ![Create a VM in Proxmox step 8](../images/proxmox_create_vm_step_8.png)
+
 ### Managing a VM
 
 The VM is fairly intuitive for basic operations. There are options to start, stop, shutdown, etc. in the lower menu bar at the top right of the management interface. These can also be accessed by right clicking on the VM's name.
