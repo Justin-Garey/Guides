@@ -138,4 +138,6 @@ By default, Calibre exports the books by {author_sort}/{title}/{title} - {author
    |- Inheritance
       |- Inheritance - Christopher Paolini.pdf
 ```
+### Switch Library in Calibre
 
+For my Kavita usage, I have multiple libraries depending on the type of media. Calibre also supports multiple libraries. The library icon is of books stacked next to each other. Clicking on that allows selection of switching the library or creating a new one.
