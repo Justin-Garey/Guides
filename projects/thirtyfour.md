@@ -37,14 +37,14 @@ async fn main() -> WebDriverResult<()> {
 ```
 
 Now the webdriver can be instantiated.
-```
+```rust
 let driver = WebDriver::new("http://localhost:9515", DesiredCapabilities::chrome()).await?;
 ```
 - The webdriver takes in a port it can live on and the capabilities it should have. Here, the base is used.
 - There is an await method attached to this so the code does not move on until the webdriver is up.
 
 Time to go to a website! In this example, we will go to the Merriam Webster dictionary for their word of the day.
-```
+```rust
 driver.goto("https://www.merriam-webster.com/word-of-the-day").await?;
 ```
 - We give the driver a location and wait for it to complete.
