@@ -72,10 +72,10 @@ git bundle create bundle-name.bundle --all
 
 A bundle can be checked after transfer with:
 ```bash
-git verify bundle-name.bundle
+git bundle verify bundle-name.bundle
 ```
 
-To set up the repository from the bundle, either use `unbundle` or `clone`:
+To set up the repository from the bundle, either use `bundle unbundle` or `clone`:
 ```bash
 git clone bundle-name.bundle
 ```
