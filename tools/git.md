@@ -59,3 +59,23 @@ git reset HEAD~
 ```
 - This will leave the files unchanged but all of the modifications will need added and committed again.
 - This is useful when you've made local changes and a commit that you want to push but the main branch is already ahead of you.
+
+## Using a Git Bundle
+
+Bundles are used for transferring Git objects offline. They are formatted as `.pack` files.
+
+A bundle is created with:
+```bash
+git bundle create bundle-name.bundle --all
+```
+- The `--all` puts everything into the bundle.
+
+A bundle can be checked after transfer with:
+```bash
+git verify bundle-name.bundle
+```
+
+To set up the repository from the bundle, either use `unbundle` or `clone`:
+```bash
+git clone bundle-name.bundle
+```
