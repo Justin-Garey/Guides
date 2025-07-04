@@ -75,6 +75,13 @@ To connect to the Headscale control server:
 sudo tailscale up --login-server http://<EC2_INSTANCE_ADDRESS> --auth-key <AUTH_KEY>
 ```
 - This should only need done once and persist across reboots of both the control server and the client device. If the control server goes offline, some of the client devices may need restarted once it is back online to establish a proper connection.
+## Connect the Tailscale Node (Windows)
+
+First, install the [Windows Client](tailscale.com/download/windows). Then open up CMD to connect to the Headscale control server:
+```powershell
+tailscale up --accept-routes --login-server http://<EC2_INSTANCE_ADDRESS> --auth-key <AUTH_KEY>
+```
+- This will persist across reboots.
 ## Connect the Tailscale Node (iOS)
 
 1. Install the Tailscale app on the iOS device. Go through the set up process but do not log in. If you are already logged in, log out. Close out of the app.
