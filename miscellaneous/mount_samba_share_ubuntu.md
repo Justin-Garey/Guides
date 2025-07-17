@@ -10,6 +10,16 @@ Once CIFS support is installed, the Samba file server can be mounted by specifyi
 ```bash
 sudo mount -v -t cifs //<server-ip-address>/<location> <path-to-mount-to> -o guest,vers=2.0,dir_mode=0777,file_mode=0777,nounix
 ```
+
+## Encountered Issues
+
+### mount error(112)
+
+`mount error(112): Host is down` with a comment on the SMB version possibly being a mismatch. This ended up being an entirely different problem. There was another device with the same username with the Samba share mounted. If the `user=<username>` was specified with a different username than the user on the device; or if the Samba share was unmounted on the other device, the Samba share can be mounted. I've modified one of the devices to use the command with the username specified:
+```bash
+sudo mount -v -t cifs //<server-ip-address>/<location> <path-to-mount-to> -o guest,vers=2.0,dir_mode=0777,file_mode=0777,nounix,user=<name>
+```
+
 ## References
 
 - Wikipedia page for [Samba](https://en.wikipedia.org/wiki/Samba_(software))
