@@ -79,3 +79,22 @@ To set up the repository from the bundle, either use `bundle unbundle` or `clone
 ```bash
 git clone bundle-name.bundle
 ```
+
+## Remove All Untracked Files
+
+`git clean` can be used to remove untraked files and/or directories.
+
+- Use `-n` to perform a dry run.
+- `-f` signifies force but is required by default.
+- `-d` tells `git clean` to recurse into directories enabling directory removal as well.
+- `-x` also removes items listed in the *.gitignore* if they are there.
+
+To just remove all untracked files, first use:
+```bash
+git clean -nd
+```
+
+If that looks acceptable, then use:
+```bash
+git clean -fd
+```
