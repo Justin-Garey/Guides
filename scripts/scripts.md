@@ -1,10 +1,10 @@
 # Scripts
 
-One helpful thing I do on every computer I use regularly is create a `~/scripts` directory that I add to `PATH`. This way I don't have to go searching for something I don't use regularly, and I have quick access to the things I do use a lot.
+One helpful thing I do on every computer I use regularly is create a `~/Scripts` directory that I add to `PATH`. This way I don't have to go searching for something I don't use regularly, and I have quick access to the things I do use a lot.
 
-To add the `scripts` directory to `PATH`, I've added the following line to the end of my `~/.bashrc` file.
+To add the `Scripts` directory to `PATH`, I've added the following line to the end of my `~/.bashrc` file.
 ```
-export PATH="$PATH:~/scripts"
+export PATH="$PATH:~/Scripts"
 ```
 
 Scripts I have:

@@ -5,3 +5,5 @@ Zotero is a program which organizes references. The best place to get started is
 Some other things that you can do with Zotero is connecting it to your word processor such as Google Docs, Microsoft Word, or Libre Office for easy bibliographical insertions. Zotero can be synced among multiple devices so your references are available wherever you are. Zotero can provide that sync for you or you could set up your own server to centralize everything.
 
 References in Zotero can be organized by creating collections. You can also search for references and view any associated data by clicking on it. You can find out more about Zotero basics from the [Quick Start Guide](https://www.zotero.org/support/quick_start_guide)
+
+Zotero can also sync between devices. For more information on self hosting a sync server or for self hosting Zotero itself, see the [Zotero](../self_hosting/zotero.md) self hosting notes.

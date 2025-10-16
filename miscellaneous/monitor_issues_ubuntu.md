@@ -19,3 +19,7 @@ Usually when this happens to me, I either haven't used a second monitor in a bit
 Ubuntu has color profiles for the displays. This one is an easy fix once you find the color profiles option in settings. The color profiles are supposed to automatically be set for the type of monitor that is connected, but sometimes the system will have a hiccup.
 
 On Ubuntu 22.04, the color profiles are found under **Settings** -> **Color** -> **Device**.
+
+## Primary Monitor Appears Yellow
+
+Simply updating, upgrading, and rebooting seem to solve this.
