@@ -35,7 +35,7 @@ The following guides are of things I have done and encountered. During the proce
 - Watch movies and TV from [Kodi](./self_hosting/kodi.md).
 - Use [Proxmox](./self_hosting/proxmox.md) to create and manage virtual machines.
 - Privatize your git repositories while still having a web GUI with [Gitea](./self_hosting/gitea.md).
-- Create a mesh VPN with [Tailscale](./self_hosting/) on your devices and [Headscale](./self_hosting/headscale.md) to orchestrate that connections.
+- Create a mesh VPN with [Tailscale](./self_hosting/tailscale.md) on your devices and [Headscale](./self_hosting/headscale.md) to orchestrate that connections.
 - Use [Jupyter Notebook](./self_hosting/jupyter_notebook.md) to work through programming and note taking together.
 - Play ROMs from the browser or store game files with [RomM](./self_hosting/romm.md).
 - [Stremio](./self_hosting/stremio.md) can be used for a streaming web interface that aggregates your video content.
