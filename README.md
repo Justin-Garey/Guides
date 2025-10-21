@@ -25,6 +25,7 @@ The following guides are of things I have done and encountered. During the proce
 - How to [resize a drive](./linux_management/resize_ubuntu_drive.md) in Ubuntu.
 - [Remove a kernel](./linux_management/rm_kernel.md).
 - Create or remove [symbolic links](./linux_management/symlink.md).
+- Allow Snap packages to have [permission to print](./linux_management/print_from_snap_package.md).
 
 ## Scripts
 - This [category](./scripts/scripts.md) is a reference to one way I manage useful scripts I create and how to access them easily. This is helpful for having global access to scripts I use.
