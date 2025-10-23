@@ -84,6 +84,9 @@ The following guides are of things I have done and encountered. During the proce
 ## Example Programs
 - In the example programs directory are simple programs by language that may be used for reference later on.
 
+## AWS
+- I've started a list of [Example S3 Bucket Policies](./aws/s3_bucket_policies.md).
+
 ## Future Guides & Topics
 - Jellyfin is the opensource version of Plex. I really want a plex like server to store my movies and tv shows for kodi to grab from and for the web interface so I could just vpn into home and watch movies from afar.
 - The Pwnagatchi is a really cool little hacking device but I needed to get some cables to get it set up. Once I have time to work on this more, the guide and supporting files will be added. I'm really excited for this because I want to learn more about how Wi-Fi works and this is perfectly hands on.
