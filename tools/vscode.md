@@ -16,3 +16,7 @@ I'm fairly basic when it comes to extensions. I typically just install the recom
 ## For Fun Extensions
 - vscode-pets by Anthony Shaw
 	- Allows you to have some pets that can be interacted with alongside the editor.
+
+## Extensions for Webdev
+- Tailwind CSS IntelliSense by Tailwind Labs
+  - Provides support for Tailwind through VS Code
