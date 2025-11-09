@@ -73,6 +73,7 @@ def main():
         # Get relative path from repo root
         rel_path = os.path.relpath(file_path, repo_root)
         dest_path = os.path.join(temp_dir, rel_path)
+        links_for_json.append("guides/" + rel_path.replace(os.sep, '/').split('.md')[0])
         
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)
         
@@ -91,7 +92,6 @@ def main():
                 if os.path.exists(resolved):
                     rel_from_root = os.path.relpath(resolved, repo_root)
                     new_link = f"/{rel_from_root.replace(os.sep, '/')}".split('.md')[0]
-                    links_for_json.append("guides" + new_link)
                     return f"[{text}]({new_link}{anchor})"
             return match.group(0)
         
