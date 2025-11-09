@@ -31,7 +31,6 @@ The following guides are of things I have done and encountered. During the proce
 - This [category](./scripts/scripts.md) is a reference to one way I manage useful scripts I create and how to access them easily. This is helpful for having global access to scripts I use.
 
 ## Self Hosting
-- Stream with [Stremio](./self_hosting/stremio.md).
 - Host a server to store and read books with [Kavita](./self_hosting/kavita.md).
 - Watch movies and TV from [Kodi](./self_hosting/kodi.md).
 - Use [Proxmox](./self_hosting/proxmox.md) to create and manage virtual machines.
