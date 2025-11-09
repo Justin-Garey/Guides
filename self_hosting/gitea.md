@@ -82,3 +82,7 @@ SSH_DOMAIN = gitea.micasa.local
 HTTP_PORT = 3000
 ROOT_URL = http://gitea.micasa.local/
 ```
+
+## Gitea Actions
+
+[Gitea Actions](./gitea-actions.md) is just like GitHub Actions and enables CI/CD workflows. 

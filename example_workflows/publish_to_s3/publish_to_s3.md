@@ -1,0 +1,3 @@
+# Publish to S3 Bucket
+
+The following [workflow](./publish_to_s3.yaml), tested in [Gitea Actions](../../self_hosting/gitea-actions.md) but should work in GitHub actions, is designed to push a directory within a repository, or the repository itself, to an S3 Bucket destination or folder within the S3 Bucket. This workflow is currently used by my self hosted [Gitea](../../self_hosting/gitea.md) server with [Gitea Actions](../../self_hosting/gitea-actions.md) to push items related to my personal website to my public resources S3 Bucket.
