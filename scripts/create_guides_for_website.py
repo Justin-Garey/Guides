@@ -66,6 +66,7 @@ def main():
     os.makedirs(temp_dir, exist_ok=True)
 
     links_for_json = []
+    links_for_json.append("guides/README")
     
     # Copy files and update links
     for file_path in files_to_copy:
