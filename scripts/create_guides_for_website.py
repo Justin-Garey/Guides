@@ -79,23 +79,42 @@ def main():
         
         with open(file_path, 'r') as f:
             content = f.read()
-        
-        # Replace markdown links
-        def replace_link(match):
+
+        # Replace non-markdown links and images with GitHub URLs
+        def replace_non_md_link(match):
             text = match.group(1)
             link = match.group(2)
-            link_without_anchor = link.split('#')[0]
-            anchor = '#' + link.split('#')[1] if '#' in link else ''
             
-            if link_without_anchor:
+            # Skip if it's already a full URL
+            if link.startswith('http://') or link.startswith('https://'):
+                return match.group(0)
+            
+            # Remove < and > from the ends of the link
+            link = link.strip('<>')
+            
+            # Skip if it's a markdown file
+            link_without_anchor = link.split('#')[0]
+            if link_without_anchor.endswith('.md'):
                 resolved = resolve_link_path(file_path, link_without_anchor, repo_root)
                 if os.path.exists(resolved):
                     rel_from_root = os.path.relpath(resolved, repo_root)
                     new_link = f"/guides/{rel_from_root.replace(os.sep, '/')}".split('.md')[0]
-                    return f"[{text}]({new_link}{anchor})"
-            return match.group(0)
-        
-        updated_content = re.sub(r'\[([^\]]+)\]\(([^)]+\.md)\)', replace_link, content)
+                    return f"[{text}]({new_link})"
+            
+            # Resolve the path
+            if link.startswith('/'):
+                rel_path = link.lstrip('/')
+            else:
+                source_dir = os.path.dirname(file_path)
+                abs_path = os.path.normpath(os.path.join(source_dir, link))
+                rel_path = os.path.relpath(abs_path, repo_root)
+            
+            # Create GitHub URL
+            github_url = f"https://github.com/Justin-Garey/Guides/blob/main/{rel_path.replace(os.sep, '/')}"
+            return f"[{text}]({github_url})"
+
+        # Match all links/images
+        updated_content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace_non_md_link, content)
         
         with open(dest_path, 'w') as f:
             f.write(updated_content)
