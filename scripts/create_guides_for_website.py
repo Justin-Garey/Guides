@@ -80,8 +80,8 @@ def main():
         with open(file_path, 'r') as f:
             content = f.read()
 
-        # Replace non-markdown links and images with GitHub URLs
-        def replace_non_md_link(match):
+        # Replace links and images
+        def replace_link(match):
             text = match.group(1)
             link = match.group(2)
             
@@ -92,7 +92,7 @@ def main():
             # Remove < and > from the ends of the link
             link = link.strip('<>')
             
-            # Skip if it's a markdown file
+            # markdown file
             link_without_anchor = link.split('#')[0]
             if link_without_anchor.endswith('.md'):
                 resolved = resolve_link_path(file_path, link_without_anchor, repo_root)
@@ -111,10 +111,15 @@ def main():
             
             # Create GitHub URL
             github_url = f"https://github.com/Justin-Garey/Guides/blob/main/{rel_path.replace(os.sep, '/')}"
+
+
+            if github_url.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp')):
+                github_url += '?raw=true'
+            
             return f"[{text}]({github_url})"
 
         # Match all links/images
-        updated_content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace_non_md_link, content)
+        updated_content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', replace_link, content)
         
         with open(dest_path, 'w') as f:
             f.write(updated_content)
