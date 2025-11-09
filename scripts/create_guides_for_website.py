@@ -91,7 +91,7 @@ def main():
                 resolved = resolve_link_path(file_path, link_without_anchor, repo_root)
                 if os.path.exists(resolved):
                     rel_from_root = os.path.relpath(resolved, repo_root)
-                    new_link = f"/{rel_from_root.replace(os.sep, '/')}".split('.md')[0]
+                    new_link = f"/guides/{rel_from_root.replace(os.sep, '/')}".split('.md')[0]
                     return f"[{text}]({new_link}{anchor})"
             return match.group(0)
         
