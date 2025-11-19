@@ -13,6 +13,10 @@ The following guides are of things I have done and encountered. During the proce
 - Using [Obsidian](./tools/obsidian.md) for note taking has been amazing.
 - Program in [VS Code](./tools/vscode.md); my favorite code editor.
 - Schedule some [cron](./tools/cron.md) jobs.
+- Canonical's [Chisel](./tools/chisel.md) tool can be used to make Docker containers smaller and more secure.
+- Use [debsecan](./tools/debsecan.md) to analyze packages on Debian and Ubuntu for vulnerabilities.
+- [Docker Scout](./tools/docker_scout.md) can be used to find vulnerabilities within Docker containers.
+- Audit Python packages with [pip-audit](./tools/pip-audit.md). 
 
 ## Linux Management
 - Remove the [Boot Logo](./linux_management/rm_boot_logo.md) on Ubuntu.
