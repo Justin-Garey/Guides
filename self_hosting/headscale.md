@@ -77,7 +77,7 @@ sudo tailscale up --login-server http://<EC2_INSTANCE_ADDRESS> --auth-key <AUTH_
 - This should only need done once and persist across reboots of both the control server and the client device. If the control server goes offline, some of the client devices may need restarted once it is back online to establish a proper connection.
 ## Connect the Tailscale Node (Windows)
 
-First, install the [Windows Client](tailscale.com/download/windows). Then open up CMD to connect to the Headscale control server:
+First, install the [Windows Client](https://tailscale.com/download/windows). Then open up CMD to connect to the Headscale control server:
 ```powershell
 tailscale up --accept-routes --login-server http://<EC2_INSTANCE_ADDRESS> --auth-key <AUTH_KEY>
 ```
