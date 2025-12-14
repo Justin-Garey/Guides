@@ -83,6 +83,7 @@ The following guides are of things I have done and encountered. During the proce
 - Notes on [monitor issues](./miscellaneous/monitor_issues_ubuntu.md) when using Ubuntu.
 - [Mount a Samba share](./miscellaneous/mount_samba_share_ubuntu.md) in Ubuntu.
 - Check out the list of [reserved characters](./miscellaneous/windows_reserved_characters.md) in Windows.
+- Learn how to [record an audio cassette](./miscellaneous/recording_from_audio_cassette.md).
 
 ## Example Programs
 - In the example programs directory are simple programs by language that may be used for reference later on.
