@@ -45,6 +45,7 @@ The following [guides](https://github.com/Justin-Garey/Guides) are of things I h
 - Play ROMs from the browser or store game files with [RomM](./self_hosting/romm.md).
 - [Stremio](./self_hosting/stremio.md) can be used for a streaming web interface that aggregates your video content.
 - Self host a [Zotero](./self_hosting/zotero.md#self-hosting-a-backup-server) backup server or the entire [Zotero](./self_hosting/zotero.md#self-hosting-zotero) frontend for web based interactions too.
+- Create your own dashboard for monitoring your homelab with [Homepage](./self_hosting/homepage.md)
 
 ## Hacks & Mods
 - Instructions for [sideloading](./hacks_and_mods/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)

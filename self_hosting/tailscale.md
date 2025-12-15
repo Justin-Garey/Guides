@@ -23,3 +23,15 @@ To see the most recent logs Tailscale logs:
 ```bash
 journalctl -u tailscaled | tail
 ```
+
+## Tailscale Sidecar
+
+The sidecar service can be used to aggregate services into a single Docker Compose and to improve security by only allowing the service on the Tailnet. Each service in a Docker Compose configuration will receive its own sidecar service. The sidecar must also be provided with a config file for how to serve the Docker service.
+
+See the [Homepage](./homepage.md) configuration for more details on what a basic sidecar service looks like. 
+
+If you are using [Headscale](./headscale.md), you will not be able to use the funnel feature but the serve configuration will still be functional.
+
+### Resources
+
+- [ScaleTail](https://github.com/2Tiny2Scale/ScaleTail): A repository full of examples.
