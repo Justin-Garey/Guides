@@ -30,6 +30,7 @@ The following [guides](https://github.com/Justin-Garey/Guides) are of things I h
 - [Remove a kernel](./linux_management/rm_kernel.md).
 - Create or remove [symbolic links](./linux_management/symlink.md).
 - Allow Snap packages to have [permission to print](./linux_management/print_from_snap_package.md).
+- [Check if the storage device](./linux_management/check_underlying_storage.md) is an HDD or SDD.
 
 ## Scripts
 - This [category](./scripts/scripts.md) is a reference to one way I manage useful scripts I create and how to access them easily. This is helpful for having global access to scripts I use.
