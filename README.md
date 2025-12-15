@@ -1,6 +1,6 @@
 # Guides
 
-The following guides are of things I have done and encountered. During the process I either thought that this would be useful for someone else or thought that it would be useful for myself in the future. If you do stumble upon this and try to use something from one of the guides and it doesn't work, go ahead and let me know by opening an issue. I'm not checking anything on here until I actually use it again. Some things may also be much more detailed than others just due to the amount of time I've put into it.
+The following [guides](https://github.com/Justin-Garey/Guides) are of things I have done and encountered. During the process I either thought that this would be useful for someone else or thought that it would be useful for myself in the future. If you do stumble upon this and try to use something from one of the guides and it doesn't work, go ahead and let me know by opening an issue. I'm not checking anything on here until I actually use it again. Some things may also be much more detailed than others just due to the amount of time I've put into it.
 
 ## Tools
 - Tips for better use of [SSH](./tools/ssh.md).
@@ -86,7 +86,7 @@ The following guides are of things I have done and encountered. During the proce
 - Learn how to [record an audio cassette](./miscellaneous/recording_from_audio_cassette.md).
 
 ## Example Programs
-- In the example programs directory are simple programs by language that may be used for reference later on.
+- In the [example programs](./example_programs/example_programs.md) directory are simple programs by language that may be used for reference later on.
 
 ## AWS
 - I've started a list of [Example S3 Bucket Policies](./aws/s3_bucket_policies.md).
