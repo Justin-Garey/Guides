@@ -86,3 +86,31 @@ ROOT_URL = http://gitea.micasa.local/
 ## Gitea Actions
 
 [Gitea Actions](./gitea-actions.md) is just like GitHub Actions and enables CI/CD workflows. 
+
+## Email Setup
+
+Gitea provides their own [instructions](https://docs.gitea.com/administration/email-setup) on setting up email. 
+
+To enable email, start a text editor into the *app.ini* file. This will enable usage through an SMTP server. Set this up easily with [Google SMTP](./google_smtp.md) and create an app password. Under the mailer section:
+```conf
+[mailer]
+ENABLED = true
+SMTP_ADDR = smtp.gmail.com
+SMTP_PORT = 465
+FROM = "Gitea Admin" <YOUR-GMAIL-ACCOUNT@gmail.com>
+USER = YOUR-GMAIL-ACCOUNT@gmail.com
+PASSWD = GENERATED-APP-PASSWORD
+PROTOCOL = smtps
+```
+- Restart Gitea so the configuration takes effect.
+
+Test the mail server in Gitea. Go to Gitea > Site Administration > Configuration > Summary -> Mailer Configuration. Enter an email to send to for the test and hit send. Once it's sent the page will refresh and a bar will appear at the top saying the email has been sent. 
+
+Once that is working, enable notification settings (e.g. an issue was created). By default, the setting is false.
+```conf
+[service]
+...
+ENABLE_NOTIFY_MAIL = true 
+...
+```
+- The configuration will take effect the next time Gitea restarts.
