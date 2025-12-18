@@ -45,7 +45,8 @@ The following [guides](https://github.com/Justin-Garey/Guides) are of things I h
 - Play ROMs from the browser or store game files with [RomM](./self_hosting/romm.md).
 - [Stremio](./self_hosting/stremio.md) can be used for a streaming web interface that aggregates your video content.
 - Self host a [Zotero](./self_hosting/zotero.md#self-hosting-a-backup-server) backup server or the entire [Zotero](./self_hosting/zotero.md#self-hosting-zotero) frontend for web based interactions too.
-- Create your own dashboard for monitoring your homelab with [Homepage](./self_hosting/homepage.md)
+- Create your own dashboard for monitoring your homelab with [Homepage](./self_hosting/homepage.md).
+- Don't self host a mail server, use [Google SMTP](./self_hosting/google_smtp.md) instead.
 
 ## Hacks & Mods
 - Instructions for [sideloading](./hacks_and_mods/ios_sideloading.md) apps onto an iOS device. (Specifically an iPad Mini 1)
@@ -86,6 +87,8 @@ The following [guides](https://github.com/Justin-Garey/Guides) are of things I h
 - [Mount a Samba share](./miscellaneous/mount_samba_share_ubuntu.md) in Ubuntu.
 - Check out the list of [reserved characters](./miscellaneous/windows_reserved_characters.md) in Windows.
 - Learn how to [record an audio cassette](./miscellaneous/recording_from_audio_cassette.md).
+- Add to your Kindle's [approved email list](./miscellaneous/kindle_approved_email.md).
+- Find your [Kindle's email address](./miscellaneous/kindle_email_address.md).
 
 ## Example Programs
 - In the [example programs](./example_programs/example_programs.md) directory are simple programs by language that may be used for reference later on.

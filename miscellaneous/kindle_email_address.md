@@ -1,0 +1,3 @@
+# Kindle Email Address
+
+Amazon provides each kindle with a unique email address which can be used to send ebooks to your kindle. Amazon has information under the [send to kindle page](https://www.amazon.com/sendtokindle/email) for how to access it and what you can do with it. Find you email address at [Manage Your Content and Devices](https://www.amazon.com/hz/mycd/digital-console/contentlist/pdocs/dateDsc) -> Preferences -> Send-to-Kindle E-Mail Settings.

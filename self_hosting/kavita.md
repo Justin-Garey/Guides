@@ -6,7 +6,9 @@ The basic install steps can be found [here](https://github.com/Kareadita/Kavita/
 2. Extract the contents to a writable directory where you would keep applications. I have a directory at *~/Apps* for this kind of stuff.
 3. Then ```cd Kavita``` and ```chmod +x ./Kavita```.
 4. Screen or some other method for running kavita in the background would be useful. To run, just use ```./Kavita``` in the *~/Apps/Kavita* directory.
-## Running Kavita in Docker Compose
+### Setup
+
+### Running Kavita in Docker Compose
 
 1. Install Docker
 2. Add the Docker Compose configuration as `kavita-docker-compose.yml`
@@ -27,6 +29,73 @@ services:
         restart: unless-stopped
 ```
 3. Run Docker Compose with ```docker compose -f kavita-docker-compose.yml up -d```
+
+### Using a Tailscale Sidecar
+
+If you are using [Tailscale](./tailscale.md) and want multiple services configured from a single Docker Compose file, then a Tailscale sidecar can be used to orchestrate the network for Kavita.
+
+```yaml
+services:
+    kavita-ts-sidecar:
+        image: tailscale/tailscale:stable
+        container_name: kavita-ts-sidecar
+        hostname: kavita
+        cap_add:
+            - NET_ADMIN
+            - SYS_MODULE
+        volumes:
+            - ./tailscale-config:/config
+            - ./tailscale-persistence/kavita:/var/lib/tailscale
+        devices:
+            - /dev/net/tun:/dev/net/tun
+        environment:
+            - TS_AUTHKEY=INSERT_AUTH_KEY
+            - TS_STATE_DIR=/var/lib/tailscale
+            - TS_EXTRA_ARGS=--login-server=LOGIN_SERVER_URL --accept-routes=true --reset --advertise-routes=100.64.0.0/24
+            - TS_SERVE_CONFIG=/config/kavita-serve.json
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD", "tailscale", "status"]
+            interval: 10s
+            timeout: 5s
+            retries: 6
+            start_period: 5s
+
+    kavita:
+        image: jvmilazz0/kavita:latest
+        container_name: kavita
+        volumes:
+            - ./books:/books
+            - ./kavita/config:/kavita/config
+        environment:
+            - TZ=America/New_York
+        restart: unless-stopped
+        network_mode: service:kavita-ts-sidecar
+        depends_on:
+            kavita-ts-sidecar:
+                condition: service_healthy
+```
+
+The serve file:
+```json
+{
+  "TCP": {
+    "80": {
+      "HTTP": true
+    }
+  },
+  "Web": {
+    "kavita.my-tailnet.com:80": {
+      "Handlers": {
+        "/": {
+          "Proxy": "http://127.0.0.1:5000"
+        }
+      }
+    }
+  }
+}
+```
+
 ## Using Kavita
 ### Setup
 
@@ -107,6 +176,41 @@ To create a smart filter:
 - Change the *Filter Name* to *Completed Books*
 - Hit *Save*
 - Under *Customize* in the settings, smart filters can be used 
+### Setting up Email
+
+This assumes you already have [Google SMTP](./google_smtp.md) setup.
+
+To set up Kavita to use email, first go to settings (click the two gears in the upper right hand corner of the webpage).
+- Under Server on the left menu bar, select Email
+- All of the items will need filled in.
+  - Host Name: The access URL for Kavita (e.g. http://kavita.my-tailnet.com if using Tailscale)
+  - Sender Address: The email address of your Google SMTP account
+  - Display Name: The name of the sender in the email
+  - Host: `smtp.gmail.com`
+  - Port: `465`
+    - Enable Use SSL on Email Server
+  - Username: The email address of your Google SMTP account
+  - Password: App Password generated from your Google SMTP account
+
+Now you can test the email functionality as well at the top of this settings page with the Test button. A toast should pop up saying it was successful.
+
+### Setting up a Send-to Device
+
+The best part of Kavita if you have a Kindle is the ability to browse and just send to your Kindle. Make sure you've already added your [Google SMTP](./google_smtp.md) email address to your Amazon account as an [approved email](../miscellaneous/kindle_approved_email.md) for Kindle.
+
+First go to settings by clicking on the two gears in the upper right hand corner of the webpage
+- Select Devices
+- Click on +Add
+- Enter a Name for the device so you can remember which one you are sending to
+- Enter the Email (take special note if it is the [Kindle address](../miscellaneous/kindle_email_address.md))
+- Then select the platform if it is listed (i.e. Kindle, Kobo, PocketBook)
+
+Now, when you are in the page for a book, clicking the three dots (menu icon) will show a dropdown. 
+- Hover over or Click on Send To
+- Select your destination
+
+A green toast should pop up telling you that it was successful.
+
 ## Calibre
 
 Calibre is a great tool for organizing a book collection and editing the metadata of EPUB books. Basic use is as follows:

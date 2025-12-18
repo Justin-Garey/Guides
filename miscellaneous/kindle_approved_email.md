@@ -1,0 +1,3 @@
+# Kindle Approved Senders List
+
+This is the list of emails provided to Amazon that are allowed to send content to your kindle devices. Go to [Manage Your Content and Devices](https://www.amazon.com/hz/mycd/digital-console/contentlist/pdocs/dateDsc) -> Preferences -> Approved Personal Document E-mail List. Click on Add a new e-mail address to add a trusted email address that will be able to send books to your kindle.
