@@ -111,3 +111,21 @@ If you make any changes to the configuration, make sure to restart Headscale aft
 sudo systemctl restart --now headscale
 ```
 - Some of the client devices will need rebooted after this to create a proper connection. Do this with caution.
+
+## Upgrade
+
+Before upgrading, be sure to run the backup script. Then
+follow the same [installation](https://headscale.net/stable/setup/install/official/#using-packages-for-debianubuntu-recommended) steps as before.
+
+For our instance using the deb file:
+- Figure out the next version (don't jump versions)
+- Download that with wget
+  - `wget --output-document=headscale.deb <link>`
+- Stop headscale
+  - `sudo systemctl stop headscale`
+- Install the new deb package
+  - `sudo apt install ./headscale.deb`
+- Reenable headscale
+  - `sudo systemctl enable --now headscale`
+- Check status
+  - `sudo systemctl status headscale`
