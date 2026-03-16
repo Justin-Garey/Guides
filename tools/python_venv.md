@@ -37,3 +37,11 @@ The virtual environment provides the Python executables including pip, a require
 ```bash
 .venv/bin/pip install -r requirements.txt
 ```
+
+## Use `sudo` with the Virtual Environment
+
+The virtual environment comes with all of the necessary Python applications so the python3 binary can be executed within *.venv* by passing the script.
+
+```bash
+sudo ./venv/bin/python3 <script>
+```
