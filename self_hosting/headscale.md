@@ -52,7 +52,7 @@ A key is needed to add a client device to the Tailnet.
 
 The default key creation will make a new key for a user that can be used once and expires after one hour:
 ```bash
-sudo headscale preauthkeys create --user <USER_NAME>
+sudo headscale preauthkeys create --user <USER_ID>
 ```
 - As long as the machine is not disconnected from Headscale, it will always reconnect on boot.
 
@@ -63,7 +63,7 @@ The output will confirm the key creation with an expiry:
 
 To make a key that will not expire and reusable:
 ```bash
-sudo headscale preauthkeys create -e 99y --reusable --user <USER_NAME>
+sudo headscale preauthkeys create -e 99y --reusable --user <USER_ID>
 ```
 - This came in handy on my laptop which was having issues connecting after a reboot.
 ## Connect the Tailscale Node (Linux)
