@@ -28,6 +28,12 @@ The Google Analytics tag in a Vite + React application is added to the *index.ht
 The Google Analytics tag in a Next.js + React application is added to the *layout.tsx* file.
 
 ```tsx
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+const gaID = process.env.NEXT_PUBLIC_GA_ID;
+
+...
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,24 +41,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        {gtmId && (
-          <>
-            <noscript>
-              <iframe
-                src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
-                height="0"
-                width="0"
-                style={{ display: "none", visibility: "hidden" }}
-              />
-            </noscript>
-            <GoogleTagManager gtmId={gtmId} />
-          </>
-        )}
+      {gaID && (
+        <GoogleAnalytics gaId={gaID} />
+      )}
       <body>
         {children}
       </body>
     </html>
   );
+}
 ```
 - In this case, the google tag is left as an environment variable. It should either be added in *.env.local* or if Github Actions are being used, add it as a repository variable under *Actions* in *Secretes and Variables* in the settings.
 
