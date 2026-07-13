@@ -32,6 +32,109 @@ See the [Homepage](./homepage.md) configuration for more details on what a basic
 
 If you are using [Headscale](./headscale.md), you will not be able to use the funnel feature but the serve configuration will still be functional.
 
+## Exit Node
+
+An exit node is used to route all public internet traffic through a node on the Tailnet. This is useful for instances where you have an untrusted Wi-Fi network or are away from home. This essentially sets the default routes to the exit node and is similar to using a traditional VPN.
+
+### Advertise a Device as an Exit Node
+
+- [Tailscale Documentation](https://tailscale.com/docs/features/exit-nodes?tab=linux#advertise-a-device-as-an-exit-node)
+
+For a Linux device as the exit node, first enable IP forwarding:
+
+```bash
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
+```
+
+Now set the advertising flag and re-up Tailscale, assuming Tailscale has already been set up:
+
+```bash
+sudo tailscale set --advertise-exit-node
+sudo tailscale down
+sudo tailscale up
+```
+
+### Allow the Exit Node
+
+#### Tailscale Admin Console
+
+From [Tailscale Documentation](https://tailscale.com/docs/features/exit-nodes?tab=linux#allow-the-exit-node-from-the-admin-console):
+
+>- Open the Machines page of the admin console and locate the exit node.
+>- Locate the Exit Node badge in the machines list or use the property:exit-node filter to list all devices advertised as exit nodes.
+
+#### Headscale Setup
+
+- [Headscale Documentation](https://tailscale.com/docs/features/exit-nodes?tab=linux#allow-the-exit-node-from-the-admin-console)
+
+Get the Headscale routes:
+
+```bash
+sudo headscale nodes list-route
+```
+
+Output should be similar to:
+
+```log
+ID | Hostname | Approved | Available | Serving (Primary)
+18 | e-node   |          | 0.0.0.0/0 |                  
+   |          |          | ::/0      |  
+```
+
+Enable routes for the advertised node (e-node):
+
+```bash
+sudo headscale nodes approve-routes --identifier 18 --routes 0.0.0.0/0
+```
+
+Verify the node is enabled:
+
+```bash
+sudo headscale nodes list-route
+```
+
+Output should be similar to:
+
+```log
+ID | Hostname | Approved  | Available | Serving (Primary)
+18 | e-node   | 0.0.0.0/0 | 0.0.0.0/0 | 0.0.0.0/0        
+   |          | ::/0      | ::/0      | ::/0             
+```
+
+### Set the Exit Node
+
+Nodes do not use the exit node by default. They must be set to use the node.
+- [Tailscale Documentation](https://tailscale.com/docs/features/exit-nodes?tab=ios#use-the-exit-node)
+
+#### On Linux
+
+```bash
+sudo tailscale set --exit-node e-node
+```
+
+- The exit node can be set using the node IP or hostname.
+
+To continue allowing LAN access:
+
+```bash
+sudo tailscale set --exit-node e-node --exit-node-allow-lan-access true
+```
+
+To stop using an exit node:
+```bash
+sudo tailscale set --exit-node=
+```
+
+#### On iOS
+
+The Tailscale app on iOS has a drop down menu at the top of the screen for exit node selection. From here, *allow LAN access* can also be enabled.
+
+#### On Windows
+
+Select the Tailscale icon and select *Use exit node*. Then select the machine name of the exit node. The *Allow local network access* can also be enabled.
+
 ### Resources
 
 - [ScaleTail](https://github.com/2Tiny2Scale/ScaleTail): A repository full of examples.
