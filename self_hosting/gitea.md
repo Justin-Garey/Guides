@@ -114,3 +114,67 @@ ENABLE_NOTIFY_MAIL = true
 ...
 ```
 - The configuration will take effect the next time Gitea restarts.
+
+## Backup
+
+I have a backup script to handle backing up the instance:
+
+```bash
+#!/bin/bash
+
+# Ensure root permissions
+sudo -v
+
+# Get the time
+TIME=$(date +"%Y-%m-%d_%H-%M-%S")
+
+# Make the backups directory
+mkdir -p backups
+
+# Dump the Gitea configuration and database to a temporary directory within the Gitea container.
+DUMPFILE=$(docker exec -u git -it -w /tmp $(docker ps -qf 'name=^gitea$') bash -c '/usr/local/bin/gitea dump -c /data/gitea/conf/app.ini' | awk '/Finish dumping in file/ {print $NF}')
+
+DUMPFILE=${DUMPFILE//[[:space:]]/}
+
+# Copy the dump file out from the Gitea container
+docker cp $(docker ps -qf 'name=^gitea$'):$DUMPFILE ./backups
+
+# Clear the tmp directory within the Gitea container
+docker exec -u git -it -w /tmp $(docker ps -qf 'name=^gitea$') bash -c 'rm -rf /tmp/*'
+
+# Copy backup to remote storage
+mv ./backups/$(basename $DUMPFILE) ./backups/gitea-backup-$TIME.zip
+```
+
+## Restore
+
+*NOTE*: These instructions are partially incomplete.
+
+1. Use `scp` or another method to copy the zip to the new host.
+
+2. Setup the Gitea instance.
+
+2. Unzip, Copy, and Restore - do this step by step:
+
+```bash
+# Unzip
+unzip gitea-dump-*.zip -d gitea-dump
+cd gitea-dump
+
+# Copy and restore the server files
+docker cp ./data/. gitea:/data/gitea
+cp -r repos/* ~/gitea/data/git/repositories/
+docker exec --user git -it gitea bash
+chown -R git:git /data
+
+# Make account here on web interface - should this be done first?
+
+/usr/local/bin/gitea -c '/data/gitea/conf/app.ini' admin regenerate hooks
+exit
+
+# Copy and restore the mysql db - Use the restore db instructions instead
+docker cp ./gitea-db.sql gitea-db:/tmp/gitea-db.sql
+docker exec -it gitea-db bash
+mysql --default-character-set=utf8mb4 -uroot -pgitea gitea < /tmp/gitea-db.sql
+exit
+```
