@@ -1,9 +1,9 @@
 REM Rick Roll on Linux
 ATTACKMODE HID STORAGE
-DELAY 2000
+DELAY 3000
 CTRL ALT t
-DELAY 1000
-STRING curl https://raw.githubusercontent.com/Justin-Garey/Guides/main/guides/pico-ducky/theme_song.zip -o theme_song.zip
+DELAY 2000
+STRING curl -L -O https://github.com/Justin-Garey/Guides/raw/refs/heads/main/projects/pico-ducky/theme_song.zip
 ENTER
 STRING unzip -u theme_song.zip
 ENTER

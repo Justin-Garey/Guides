@@ -10,13 +10,19 @@ These instructions are based on a Network Chuck [video](https://youtu.be/e_f9p-_
 
 3. A [reverse shell](./linux_rev_shell.dd) could always come in handy and would be fun to just have a proof of concept. Some modifications may be needed such as the IP address to connect to. The script creates a Bash TCP connection sort of in the background which can connect to the attackers machine using ```nc -lvp 4242```. It's very simple and can be very fast. 
 
+4. I've created some more maliciously aligned scripts such as getting the linux filesystem structure, getting ssh credentials - the private keys, getting environment and configuration settings which often have API keys, and getting any available cloud credentials. For these I'm only printing out the found information rather than having a whole setup to send it or retrieve it for later use.
+
+5. I made a game that's not really a game, it just says it's a game then tells you it's stealing your bitcoin funds.
+
+6. I realized that ASCII art would be a cool way to use this so I made a generate script for creating an ASCII star ducky script file. 
+
 ## Potential Creations
 
-1. A brute force password cracker would be simple to create but probably not that useful.
+1. A brute force password cracker would is not effective with modern lockouts on most systems. The Bad USB has no way of knowing that a lockout has occurred or if extra steps are required such as on Windows after inputting an incorrect pin multiple times, it requires you to type out a string before continuing.
 
-2. This could also be used to play a game. It would be more of a novelty program but cool to have.
+2. The most useful aspect of this may actually be in its ability to basically be a script without being a script. If you ever have to start working on new devices and can't download or copy over your setup scripts, this could be used to replace that setup since it's essentially a keyboard automation and won't impact any security requirements.
 
-3. Some more malicious things I could do with this are password extractions, system wipes, lock users out, and command replacements.
+3. Some more malicious things that could be done with this are password extractions, system wipes, lock users out, and command replacements. I've attempted some of this as just printing out the information to see what it actually accesses and how useful it would be.
 
 ## Notes
 - The data will seem slower if the DELAYs are included. They are not needed even though the terminal looks a bit jumbled with them there.

